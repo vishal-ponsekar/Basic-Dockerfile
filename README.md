@@ -1,5 +1,5 @@
 # Basic-Dockerfile
-Build a basic Dockerfile to create a Docker image
+Built a basic Dockerfile to create a Docker image
 
 ### Steps
 - Installed docker in my ubuntu server
@@ -22,7 +22,7 @@ sudo docker build -t hello-captain .
 sudo docker run hello-captain
 ```
 
-- **Output**
+- **Output**<br>
 ![Loading...](images/hello-captain.png)
 
 - After, to print the name instead of Captain. I did the following changes in the dockerfile.
@@ -37,7 +37,7 @@ echo "Hello, "$user_name
 EOT
 ENTRYPOINT ["/print.sh"]
 ```
-- Then, pass my name as an argument using following command.
+- Then, pass my name as an argument when build the image using following command.
 
 ```bash
 sudo docker build --build-arg user_name="Vishal" -t hello-user .
@@ -48,7 +48,7 @@ sudo docker build --build-arg user_name="Vishal" -t hello-user .
 sudo docker run hello-user
 ```
 
-- **Output**
+- **Output**<br>
 ![Loading...](images/hello-user.png)
 
 ### Project Description URL
